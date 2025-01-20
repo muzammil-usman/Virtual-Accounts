@@ -39,3 +39,5 @@ import {
 // };
 // let btn = document.getElementById("firebaseChecker");
 // btn.addEventListener("click", firebaseTesting);
+
+// All the best
