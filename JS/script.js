@@ -36,4 +36,3 @@ for (let i = 0; i < 10; i++) {
     </div>
 </div>`;
 }
-console.log(Math.floor(1000 + Math.random() * 9000));
