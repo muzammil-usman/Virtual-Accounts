@@ -180,6 +180,7 @@
   padding: 20px 20px 20px 20px;
   border: none;
   background-color: transparent;
+  z-index: 1;
 }
 
 .top:hover{
