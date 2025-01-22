@@ -1,43 +1,39 @@
-import {
-  signInWithEmailAndPassword,
-  auth,
-  createUserWithEmailAndPassword,
-  onAuthStateChanged,
-} from "./firebase.js";
-
-// onAuthStateChanged(auth, (user) => {
-//   if (user) {
-//     // User is signed in, see docs for a list of available properties
-//     // https://firebase.google.com/docs/reference/js/auth.user
-//     const uid = user.uid;
-//     console.log("userinhey baba", user);
-//     // ...
-//   } else {
-//     console.log("User is signed out");
-//     // User is signed out
-//     // ...
-//   }
-// });
-
-// let firebaseTesting = () => {
-//   let email = document.getElementById("username");
-//   let password = document.getElementById("password");
-
-//   signInWithEmailAndPassword(auth, email.value, password.value)
-//     .then((userCredential) => {
-//       // Signed up
-//       const user = userCredential.user;
-//       console.log("behtareen hogaya ! user found ", user);
-//       // ...
-//     })
-//     .catch((error) => {
-//       const errorCode = error.code;
-//       const errorMessage = error.message;
-//       console.log("error agaya jani", errorMessage);
-//       // ..
-//     });
-// };
-// let btn = document.getElementById("firebaseChecker");
-// btn.addEventListener("click", firebaseTesting);
-
-// All the best
+let divAcc = document.querySelectorAll(".acc");
+for (let i = 0; i < 10; i++) {
+  divAcc[0].innerHTML += `
+    <div class="item">
+    <img src="./Assets/steam/image.png" id="image" width="370px" alt="image">
+    <div class='item-box'>
+    <span><strong>Account NAME :</strong>Dummy Account</span>
+  <span><strong>Account PRICE :</strong>$${Math.floor(
+    10 + Math.random() * 90
+  )}</span>
+  <button class='btn'>Buy Now</button>
+  <button class='btn'>More Details</button>
+</div>`;
+  divAcc[1].innerHTML += `
+    <div class="item">
+  <img src="./Assets/epic/image.png" id="image" width="370px" alt="image">
+    <div class='item-box'>
+    <span><strong>Account NAME :</strong>Dummy Account</span>
+  <span><strong>Account PRICE :</strong>$${Math.floor(
+    10 + Math.random() * 90
+  )}</span>
+  <button class='btn'>Buy Now</button>
+  <button class='btn'>More Details</button>
+    </div>
+</div>`;
+  divAcc[2].innerHTML += `
+    <div class="item">
+  <img src="./Assets/riot/image.png" id="image" width="370px" alt="image">
+    <div class='item-box'>
+    <span><strong>Account NAME :</strong>Dummy Account</span>
+  <span><strong>Account PRICE :</strong>$${Math.floor(
+    10 + Math.random() * 90
+  )}</span>
+  <button class='btn'>Buy Now</button>
+  <button class='btn'>More Details</button>
+    </div>
+</div>`;
+}
+console.log(Math.floor(1000 + Math.random() * 9000));
