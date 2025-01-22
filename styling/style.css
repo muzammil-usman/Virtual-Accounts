@@ -7,11 +7,43 @@
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  overflow-y:hidden ;
   list-style-type: none;
   text-decoration: none;
   font-family: "Lexend Giga", serif;
   text-transform: capitalize;
 }
+
+button{
+  cursor: pointer;
+}
+
+h1{
+  text-align: center;
+}
+
+#hide{
+  display: none;
+}
+
+#bar-button{
+  display: none;
+}
+
+#bar-button{
+  background-color: transparent;
+  border: none;
+}
+
+.nav-links{
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
 :root {
   --secondaryColour: #ffffff;
   --primaryColour: #2686f7;
@@ -23,6 +55,7 @@
   width: 100vw;
   height: 100vh;
   background-color: var(--bgColor);
+  overflow-y: scroll !important;
 }
 .main-cont {
   width: 1450px;
@@ -388,19 +421,46 @@ p{
   background-color: var(--hoverColour);
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-  .p-section {
-    padding: 20px;
-  }
+.login-pop{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.515);
+}
 
-  .p-section h1 {
-    font-size: 1.5rem;
-  }
+.form-box{
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px 15px 15px 15px;
+}
 
-  .row-text strong {
-    font-size: 1rem;
-  }
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.email-box{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.pw-box{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#quit{
+  font-size: 35px;
+  background-color: transparent;
+  border: none;
 }
 
 a {
@@ -418,6 +478,43 @@ a {
   gap: 25px;
   background-color: black;
   color: var(--secondaryColour);
+}
+
+@media screen and (max-width: 990px) {
+  #hide{display: block;}
+  #show{display: none;}
+}
+
+@media screen and (max-width: 768px) {
+  .links{display: none;}
+  #bar{
+    display: block !important;
+    color: white;
+    font-size: 50px;
+  }
+  #bar-button{
+    display: block;
+  }
+  .copyright{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .p-section {
+    padding: 20px;
+  }
+
+  .p-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .row-text strong {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 1920px) {

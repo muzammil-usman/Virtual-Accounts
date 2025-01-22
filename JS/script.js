@@ -36,3 +36,27 @@ for (let i = 0; i < 10; i++) {
     </div>
 </div>`;
 }
+
+let barBtn = document.getElementById('bar-button');
+let navLinks = document.getElementById("nav-link");
+let hideAndSeek = () => {
+  if (navLinks.style.display = 'none') {
+    navLinks.style.display = 'flex';
+    return
+  }
+  navLinks.style.display = 'none';
+}
+barBtn.addEventListener("click", hideAndSeek);
+
+
+let loginBtn = document.getElementById("loginBtn");
+loginBtn.addEventListener('click', () => {
+  let log = document.getElementById("log");
+  log.style.display = 'flex'
+})
+
+let quitBtn = document.getElementById("quit");
+quitBtn.addEventListener('click', () => {
+  let log = document.getElementById("log");
+  log.style.display = 'none'
+})

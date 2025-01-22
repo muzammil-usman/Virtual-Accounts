@@ -12,27 +12,51 @@
   </head>
   <body>
     <div class="main">
+      <div class="copyright">
+        <p style="font-size: 1.5rem">© 2025 Designed & Developed by</p>
+        <a href="" style="font-size: 2rem; color: red">Reachit Creations</a>
+      </div>
       <div class="main-cont">
         <div class="nav" id="home">
           <div class="logo">
-            <img src="Assets/header-logo.png" alt="logo image" width="350" />
+            <img
+              src="Assets/header-logo.png"
+              id="show"
+              alt="logo image"
+              width="350"
+            />
+            <img
+              src="Assets/final-logo.png"
+              id="hide"
+              alt="logo image"
+              width="80"
+            />
           </div>
           <div class="links">
             <a href="#home" class="navLinks">Home</a
             ><a href="#account-section" class="navLinks">Accounts</a
             ><a href="#p-section" class="navLinks">Privacy & Policy</a
             ><a href="#contact-section" class="navLinks">Contact Us</a>
-            <i class="fa-solid fa-bars" style="display: none"></i>
-            <button class="login btn">Login</button>
-            <button class="top">
-              <a href="#home"
-                ><i
-                  class="fa-solid fa-circle-chevron-up"
-                  style="color: orange; font-size: 55px"
-                ></i
-              ></a>
-            </button>
+            <button class="login btn" id="loginBtn">Login</button>
           </div>
+          <button id="bar-button">
+            <i class="fa-solid fa-bars" id="bar" style="display: none"></i>
+          </button>
+          <button class="top">
+            <a href="#home"
+              ><i
+                class="fa-solid fa-circle-chevron-up"
+                style="color: orange; font-size: 55px"
+              ></i
+            ></a>
+          </button>
+        </div>
+        <div class="nav-links" id="nav-link">
+          <a href="#home" class="navLinks">Home</a
+          ><a href="#account-section" class="navLinks">Accounts</a
+          ><a href="#p-section" class="navLinks">Privacy & Policy</a
+          ><a href="#contact-section" class="navLinks">Contact Us</a>
+          <button class="login btn">Login</button>
         </div>
         <div class="hero">
           <div class="image-1">
@@ -175,12 +199,35 @@
           </section>
         </div>
       </div>
-      <footer>
-        <div class="copyright">
-          <p style="font-size: 1.5rem">© 2025 Designed & Developed by</p>
-          <a href="" style="font-size: 2rem; color: red">Reachit Creations</a>
+      <div class="login-pop" id="log">
+        <div class="form-box">
+          <div class="x-btn">
+          <button id="quit"><i class="fa-solid fa-circle-xmark"></i></button>
         </div>
-      </footer>
+        <div class="form">
+          <h1>Sign In</h1>
+          <div class="email-box">
+            <label for="email">Email :</label>
+            <input
+              type="email"
+              placeholder="enter your email"
+              id="email"
+              required
+            />
+          </div>
+          <div class="pw-box">
+            <label for="pw">Password :</label>
+            <input
+              type="password"
+              placeholder="enter your password"
+              id="pw"
+              required
+            />
+          </div>
+          <button id="sumbitBtn" class="btn">Sign In</button>
+        </div>
+        </div>
+      </div>
     </div>
   </body>
   <script
