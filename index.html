@@ -10,18 +10,25 @@
   <body>
     <div class="main">
       <div class="main-cont">
-        <div class="nav">
+        <div class="nav" id="home">
           <div class="logo">
             <img src="Assets/header-logo.png" alt="logo image" width="350" />
           </div>
           <div class="links">
-            <a href="#home-home" class="navLinks">Home</a
+            <a href="#home" class="navLinks">Home</a
             ><a href="#account-section" class="navLinks">Accounts</a
-            ><a href="#boost-section" class="navLinks">Boosting</a
             ><a href="#p&P-section" class="navLinks">Privacy & Policy</a
             ><a href="#contact-section" class="navLinks">Contact Us</a>
             <i class="fa-solid fa-bars" style="display: none"></i>
-            <button class="login">Login</button>
+            <button class="login btn">Login</button>
+            <button class="top">
+              <a href="#home"
+                ><i
+                  class="fa-solid fa-circle-chevron-up"
+                  style="color: orange; font-size: 55px"
+                ></i
+              ></a>
+            </button>
           </div>
         </div>
         <div class="hero">
@@ -32,10 +39,33 @@
             <h1 class="headings">Here you can get gaming Accounts</h1>
           </div>
           <div class="image-3">
-            <h1 class="headings">Also you can boost your accounts</h1>
+            <h1 class="headings">With 100% guarantee</h1>
           </div>
         </div>
-        <div class="account-section" id="account-section"></div>
+        <div class="account-section" id="account-section">
+          <h1>Gaming Accounts</h1>
+          <div class="steam-accs accounts">
+            <div class="acc-authors stm">
+              <h2>Steam Accounts</h2>
+              <i class="fa-brands fa-steam" style="font-size: 30px"></i>
+            </div>
+            <div class="s-acc acc" id="steam-acc"></div>
+          </div>
+          <div class="epic-accs accounts">
+            <div class="acc-authors epc">
+              <h2>Epic Accounts</h2>
+              <i class="fa-solid fa-gamepad" style="font-size: 30px"></i>
+            </div>
+            <div class="e-acc acc" id="epic-acc"></div>
+          </div>
+          <div class="riot-accs accounts">
+            <div class="acc-authors rit">
+              <h2>Riot Accounts</h2>
+              <i class="fa-solid fa-hand-fist" style="font-size: 30px"></i>
+            </div>
+            <div class="r-acc acc" id="riot-acc"></div>
+          </div>
+        </div>
       </div>
       <!-- <footer>
         <div class="footer">
@@ -76,11 +106,15 @@
         </div>
       </footer> -->
     </div>
-  </body>  
+  </body>
   <script src="./JS/script.js" type="module"></script>
   <script src="./JS/firebase.js" type="module"></script>
   <script
     src="https://kit.fontawesome.com/a3e2233e19.js"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://kit.fontawesome.com/6b8a196b8e.js"
     crossorigin="anonymous"
   ></script>
 </html>

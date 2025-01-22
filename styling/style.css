@@ -10,7 +10,7 @@
   list-style-type: none;
   text-decoration: none;
   font-family: "Lexend Giga", serif;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 :root {
   --secondaryColour: #ffffff;
@@ -25,7 +25,7 @@
   background-color: var(--bgColor);
 }
 .main-cont {
-  width: 90%;
+  width: 1450px;
   height: auto;
   margin: 0 auto;
   display: flex;
@@ -60,7 +60,7 @@
     ;
   }
 }
-.login {
+.btn {
   padding: 15px 25px;
   background-color: var(--btnColour);
   border: none;
@@ -121,6 +121,101 @@
   background-color: rgba(0, 0, 0, 0.447);
 }
 
+.account-section{
+  width: 100%;
+  display: flex;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.account-section > h1{
+  color: white;
+  border: 3px solid var(--hoverColour);
+  padding: 20px 20px 20px 20px;
+}
+
+.accounts
+{
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 25px 25px 25px 25px;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  text-align: left;
+}
+
+.accounts > h2{
+   color: var(--primaryColour);
+}
+
+.acc
+{
+  width: 100%;
+  border: 2px solid white;
+  padding: 30px 10px 30px 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.508);
+}
+
+.acc-authors{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+}
+
+.top{
+  position: absolute;
+  bottom: 150px;
+  right: 55px;
+  padding: 20px 20px 20px 20px;
+  border: none;
+  background-color: transparent;
+}
+
+.top:hover{
+  color: var(--hoverColour);
+}
+
+.stm{color: var(--primaryColour);}
+.epc{color: var(--btnColour);}
+.rit{color: var(--hoverColour);}
+
+.steam-accs{background: url(../Assets/steam/image.png); background-position: center; background-size: cover;}
+.epic-accs{background: url(../Assets/epic/image.png); background-position: center; background-size: cover;}
+.riot-accs{background: url(../Assets/riot/image.png); background-position: center; background-size: cover;}
+
+.item{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 20px 20px;
+  align-items: center;
+  gap: 8px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius:15px ;
+}
+
+.item-box{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#image{
+  border-radius: 15px;
+}
+
 footer {
   background-color: var(--primaryColour);
 }
@@ -173,6 +268,12 @@ a {
   gap: 25px;
   background-color: black;
   color: var(--secondaryColour);
+}
+
+@media screen and (max-width: 1920px) {
+  .main-cont {
+  width: 90%;
+}
 }
 
 @media screen and (max-width: 1600px) {
