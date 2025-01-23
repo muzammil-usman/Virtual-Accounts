@@ -12,27 +12,51 @@
   </head>
   <body>
     <div class="main">
+      <div class="copyright">
+        <p style="font-size: 1.5rem">© 2025 Designed & Developed by</p>
+        <a href="" style="font-size: 2rem; color: red">Reachit Creations</a>
+      </div>
       <div class="main-cont">
         <div class="nav" id="home">
           <div class="logo">
-            <img src="Assets/header-logo.png" alt="logo image" width="350" />
+            <img
+              src="Assets/header-logo.png"
+              id="show"
+              alt="logo image"
+              width="350"
+            />
+            <img
+              src="Assets/final-logo.png"
+              id="hide"
+              alt="logo image"
+              width="80"
+            />
           </div>
           <div class="links">
             <a href="#home" class="navLinks">Home</a
             ><a href="#account-section" class="navLinks">Accounts</a
-            ><a href="#p&P-section" class="navLinks">Privacy & Policy</a
+            ><a href="#p-section" class="navLinks">Privacy & Policy</a
             ><a href="#contact-section" class="navLinks">Contact Us</a>
-            <i class="fa-solid fa-bars" style="display: none"></i>
-            <button class="login btn">Login</button>
-            <button class="top">
-              <a href="#home"
-                ><i
-                  class="fa-solid fa-circle-chevron-up"
-                  style="color: orange; font-size: 55px"
-                ></i
-              ></a>
-            </button>
+            <button class="login btn" id="loginBtn">Login</button>
           </div>
+          <button id="bar-button">
+            <i class="fa-solid fa-bars" id="bar" style="display: none"></i>
+          </button>
+          <button class="top">
+            <a href="#home"
+              ><i
+                class="fa-solid fa-circle-chevron-up"
+                style="color: orange; font-size: 55px"
+              ></i
+            ></a>
+          </button>
+        </div>
+        <div class="nav-links" id="nav-link">
+          <a href="#home" class="navLinks">Home</a
+          ><a href="#account-section" class="navLinks">Accounts</a
+          ><a href="#p-section" class="navLinks">Privacy & Policy</a
+          ><a href="#contact-section" class="navLinks">Contact Us</a>
+          <button class="login btn">Login</button>
         </div>
         <div class="hero">
           <div class="image-1">
@@ -69,50 +93,143 @@
             <div class="r-acc acc" id="riot-acc"></div>
           </div>
         </div>
+        <div class="privacy-section" id="p-section">
+          <div class="p-section">
+            <h1>Privacy & Policy</h1>
+            <div class="p-text">
+              <div class="row-text">
+                <strong>Privacy Policy and Terms of Use</strong>
+                <p>
+                  Welcome to our <strong>| Virtual Accounts</strong> By using
+                  our website, you agree to the following terms and conditions:
+                </p>
+              </div>
+              <div class="row-text">
+                <strong>1. Privacy Policy:</strong>
+                <p>
+                  - We collect only necessary personal information (like your
+                  name, email, and payment details) to process orders.
+                </p>
+                <p>
+                  - Your information will not be shared with third parties
+                  except for payment processing and legal requirements.
+                </p>
+                <p>- We use secure methods to protect your data.</p>
+              </div>
+              <div class="row-text">
+                <strong>2. Terms of Use:</strong>
+                <p>
+                  - We sell gaming accounts. By purchasing, you agree that all
+                  sales are final.
+                </p>
+                <p>
+                  - Ensure you review the account details before purchase.
+                  Refunds or exchanges are not provided unless the account
+                  details are incorrect.
+                </p>
+                <p>
+                  - Misuse of the website or accounts purchased may result in a
+                  ban without notice.
+                </p>
+              </div>
+              <div class="row-text">
+                <strong>3. Security and Responsibility:</strong>
+                <p>- Keep your purchased account details confidential.</p>
+                <p>
+                  - We are not responsible for accounts banned or restricted by
+                  game developers after purchase.
+                </p>
+              </div>
+              <div class="row-text">
+                <strong>4. Changes to Policy:</strong>
+                <p>
+                  - We may update this policy from time to time. Continued use
+                  of the website means you accept the updates.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-section" id="contact-section">
+          <section id="contact">
+            <div class="container">
+              <h2>Contact Us</h2>
+              <p>
+                If you have any questions or inquiries, feel free to reach out
+                to us via email. We'd love to hear from you!
+              </p>
+              <form
+                action="mailto:virtualgamingacc@gmail.com"
+                method="post"
+                enctype="text/plain"
+              >
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Your Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="message">Your Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Write your message"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+              </form>
+            </div>
+          </section>
+        </div>
       </div>
-
-      <!-- <footer>
-        <div class="footer">
-          <div class="card1">
-            <div class="firstRow">
-              <i class="fa-solid fa-location-dot"></i>
-              <p>location : abhi maloom nahi</p>
-            </div>
-            <div class="secondRow">
-              <i class="fa-solid fa-phone"></i>
-              <p>Phone : +92 xxxxxx xxxx</p>
-            </div>
-            <div class="thirdRow">
-              <i class="fa-solid fa-envelope"></i>
-              <p>Email : kauntalha@naezy.com</p>
-            </div>
-          </div>
-          <div class="card2">
-            <h3>
-              Stay upto Date with our New Listings , News and Exclusive Offers
-            </h3>
-          </div>
-          <div class="card3">
-            <h3>Connect with us</h3>
-            <div class="facebook">
-              <i class="fa-brands fa-facebook"></i>
-              <a href="">facebook </a>
-            </div>
-            <div class="insta">
-              <i class="fa-brands fa-instagram"></i>
-              <p>Instagram</p>
-            </div>
-          </div>
+      <div class="login-pop" id="log">
+        <div class="form-box">
+          <div class="x-btn">
+          <button id="quit"><i class="fa-solid fa-circle-xmark"></i></button>
         </div>
-        <div class="copyright">
-          <p style="font-size: 1.5rem">© 2025 Designed & Developed by</p>
-          <a href="" style="font-size: 2rem; color: red">Reachit Creations</a>
+        <div class="form">
+          <h1>Sign In</h1>
+          <div class="email-box">
+            <label for="email">Email :</label>
+            <input
+              type="email"
+              placeholder="enter your email"
+              id="email"
+              required
+            />
+          </div>
+          <div class="pw-box">
+            <label for="pw">Password :</label>
+            <input
+              type="password"
+              placeholder="enter your password"
+              id="pw"
+              required
+            />
+          </div>
+          <button id="sumbitBtn" class="btn">Sign In</button>
         </div>
-      </footer> -->
+        </div>
+      </div>
     </div>
-  </body>  
-  <script src="./JS/script.js" type="module"></script>
-  <script src="./JS/firebase.js" type="module"></script>
+  </body>
   <script
     src="https://kit.fontawesome.com/a3e2233e19.js"
     crossorigin="anonymous"
