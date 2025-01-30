@@ -104,6 +104,7 @@ h1{
   }
 }
 
+
 .hero {
   width: 100%;
   display: flex;
@@ -212,7 +213,7 @@ h1{
   padding: 20px 20px 20px 20px;
   border: none;
   background-color: transparent;
-  z-index: 1;
+  z-index: 2;
 }
 
 .top:hover {
@@ -421,46 +422,14 @@ p{
   background-color: var(--hoverColour);
 }
 
-.login-pop{
+.sign-up{
   display: none;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
+}
+
+.x-btn{
   width: 100%;
-  height: 100%;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.515);
-}
-
-.form-box{
-  background-color: white;
-  border-radius: 15px;
-  padding: 15px 15px 15px 15px;
-}
-
-.form{
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.email-box{
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.pw-box{
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-#quit{
-  font-size: 35px;
-  background-color: transparent;
-  border: none;
+  justify-content: flex-end;
 }
 
 a {

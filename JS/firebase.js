@@ -1,54 +1,33 @@
-// // Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-analytics.js";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+  sendEmailVerification,
+  signOut,
+} from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
 
-// import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
-// import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-analytics.js";
-// import {
-//   getAuth,
-//   createUserWithEmailAndPassword,
-//   signInWithEmailAndPassword,
-//   onAuthStateChanged,
-// } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
+const firebaseConfig = {
+  apiKey: "AIzaSyAfDFrIbb_WJqJZakYdPZ7-Wd_FS713TJk",
+  authDomain: "virtualgamingaccount.firebaseapp.com",
+  projectId: "virtualgamingaccount",
+  storageBucket: "virtualgamingaccount.firebasestorage.app",
+  messagingSenderId: "463278864655",
+  appId: "1:463278864655:web:86c9b2f7c2127180f2e67a",
+  measurementId: "G-VNLCMPHLW3",
+};
 
-// // TODO: Add SDKs for Firebase products that you want to use
-// // https://firebase.google.com/docs/web/setup#available-libraries
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const auth = getAuth(app);
 
-// // Your web app's Firebase configuration
-// // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-// const firebaseConfig = {
-//   //   koi cheez nahi chalegi config daal idhar phir chalega sub kuch
-// };
-
-// // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
-// const auth = getAuth(app);
-
-// // createUserWithEmailAndPassword(auth, email, password)
-// //   .then((userCredential) => {
-// //     // Signed up
-// //     const user = userCredential.user;
-// //     // ...
-// //   })
-// //   .catch((error) => {
-// //     const errorCode = error.code;
-// //     const errorMessage = error.message;
-// //     // ..
-// //   });
-
-// // signInWithEmailAndPassword(auth, email, password)
-// //   .then((userCredential) => {
-// //     // Signed in
-// //     const user = userCredential.user;
-// //     // ...
-// //   })
-// //   .catch((error) => {
-// //     const errorCode = error.code;
-// //     const errorMessage = error.message;
-// //   });
-
-// export {
-//   signInWithEmailAndPassword,
-//   auth,
-//   createUserWithEmailAndPassword,
-//   onAuthStateChanged,
-// };
+export {
+  auth,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+  signOut,
+};

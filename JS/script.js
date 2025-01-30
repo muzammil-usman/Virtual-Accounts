@@ -37,26 +37,46 @@ for (let i = 0; i < 10; i++) {
 </div>`;
 }
 
-let barBtn = document.getElementById('bar-button');
+let barBtn = document.getElementById("bar-button");
 let navLinks = document.getElementById("nav-link");
 let hideAndSeek = () => {
-  if (navLinks.style.display = 'none') {
-    navLinks.style.display = 'flex';
-    return
+  if ((navLinks.style.display = "none")) {
+    navLinks.style.display = "flex";
+    return;
   }
-  navLinks.style.display = 'none';
-}
+  navLinks.style.display = "none";
+};
 barBtn.addEventListener("click", hideAndSeek);
 
-
 let loginBtn = document.getElementById("loginBtn");
-loginBtn.addEventListener('click', () => {
+let openLoginPopUp = () => {
   let log = document.getElementById("log");
-  log.style.display = 'flex'
-})
+  log.style.display = "flex";
+};
+loginBtn.addEventListener("click", openLoginPopUp);
+// let quitBtn = document.getElementById("quit");
+// let quitTopUp = () => {
+//   let log = document.getElementById("log");
+//   log.style.display = "none";
+// }
+// quitBtn.addEventListener("click", quitTopUp);
+// let quitBtn2 = document.getElementById("quit2");
+// quitBtn2.addEventListener('click', quitTopUp);
 
-let quitBtn = document.getElementById("quit");
-quitBtn.addEventListener('click', () => {
-  let log = document.getElementById("log");
-  log.style.display = 'none'
-})
+let signUpPage = () => {
+  let signInPage = document.getElementById("signIN");
+  let signUpPage = document.getElementById("signUP");
+  signUpPage.style.display = "flex";
+  signInPage.style.display = "none";
+};
+let signUpBtn = document.getElementById("su");
+signUpBtn.addEventListener("click", signUpPage);
+
+let signInPage = () => {
+  let signInPage = document.getElementById("signIN");
+  let signUpPage = document.getElementById("signUP");
+  signUpPage.style.display = "none";
+  signInPage.style.display = "flex";
+};
+let signInBtn = document.getElementById("si");
+signInBtn.addEventListener("click", signInPage);

@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Virtual Accounts</title>
+    <link rel="stylesheet" href="./styling/style.css" />
+    <link rel="stylesheet" href="./styling/login.css" />
     <script src="./JS/firebase.js" type="module" defer></script>
     <script src="./JS/script.js" type="module" defer></script>
-
-    <link rel="stylesheet" href="./styling/style.css" />
+    <script src="./JS/auth.js" type="module" defer></script>
     <link rel="icon" type="image/x-icon" href="/Assets/final-logo.png" />
   </head>
   <body>
@@ -37,7 +38,14 @@
             ><a href="#account-section" class="navLinks">Accounts</a
             ><a href="#p-section" class="navLinks">Privacy & Policy</a
             ><a href="#contact-section" class="navLinks">Contact Us</a>
-            <button class="login btn" id="loginBtn">Login</button>
+            <button class="btn" id="loginBtn">Login</button>
+            <button
+              class="btn"
+              id="logoutBtn"
+              style="background-color: #fe5a59; display: none"
+            >
+              Logout
+            </button>
           </div>
           <button id="bar-button">
             <i class="fa-solid fa-bars" id="bar" style="display: none"></i>
@@ -56,7 +64,7 @@
           ><a href="#account-section" class="navLinks">Accounts</a
           ><a href="#p-section" class="navLinks">Privacy & Policy</a
           ><a href="#contact-section" class="navLinks">Contact Us</a>
-          <button class="login btn">Login</button>
+          <button class="btn" id="loginBtn">Login</button>
         </div>
         <div class="hero">
           <div class="image-1">
@@ -200,32 +208,50 @@
         </div>
       </div>
       <div class="login-pop" id="log">
-        <div class="form-box">
-          <div class="x-btn">
-          <button id="quit"><i class="fa-solid fa-circle-xmark"></i></button>
-        </div>
-        <div class="form">
-          <h1>Sign In</h1>
-          <div class="email-box">
-            <label for="email">Email :</label>
-            <input
-              type="email"
-              placeholder="enter your email"
-              id="email"
-              required
-            />
+        <div class="sign-in ring" id="signIN">
+          <i style="--clr: #00ff0a"></i>
+          <i style="--clr: #ff0057"></i>
+          <i style="--clr: #fffd44"></i>
+          <div class="login">
+            <h2>Sign In</h2>
+            <div class="inputBx">
+              <input type="email" placeholder="Email" id="user-email" />
+            </div>
+            <div class="inputBx">
+              <input type="password" placeholder="Password" id="user-pw" />
+            </div>
+            <div class="inputBx">
+              <input id="SignInBtn" type="submit" value="Sign In" />
+            </div>
+            <div class="btnLinks">
+              <button>Forget Password?</button>
+              <button id="su">Sign Up</button>
+            </div>
           </div>
-          <div class="pw-box">
-            <label for="pw">Password :</label>
-            <input
-              type="password"
-              placeholder="enter your password"
-              id="pw"
-              required
-            />
-          </div>
-          <button id="sumbitBtn" class="btn">Sign In</button>
         </div>
+        <div class="sign-up ring2" id="signUP">
+          <i style="--clr: #00ff0a"></i>
+          <i style="--clr: #ff0057"></i>
+          <i style="--clr: #fffd44"></i>
+          <div class="login">
+            <h2>Sign Up</h2>
+            <div class="inputBx">
+              <input type="text" placeholder="Full Name" id="user-name" />
+            </div>
+            <div class="inputBx">
+              <input type="email" placeholder="Email" id="user-email-2" />
+            </div>
+            <div class="inputBx">
+              <input type="password" placeholder="Password" id="user-pw-2" />
+            </div>
+            <div class="inputBx">
+              <input type="submit" id="SignUpBtn" value="Sign Up" />
+            </div>
+            <div class="btnLinks">
+              <button>Forget Password?</button>
+              <button id="si">Sign In</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
