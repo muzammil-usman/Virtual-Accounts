@@ -2,6 +2,7 @@
 
 .login-pop {
   display: none;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -13,6 +14,21 @@
   backdrop-filter: blur(5px);
   z-index: 2;
 }
+
+.crossBtn{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cross{
+  font-size: 25px;
+  color: #fe5a59;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 .ring {
   position: relative;
   width: 500px;
@@ -119,10 +135,19 @@
   box-shadow: none;
   outline: none;
 }
+
+.error{
+  display: none;
+  color: #fe5a59;
+  text-align: left;
+  font-size: 14px;
+  padding: 5px 5px 5px 5px;
+}
+
 .login .inputBx input[type="submit"] {
   width: 100%;
   background: #0078ff;
-  background: linear-gradient(45deg, #ff357a, #fff172);
+  background: linear-gradient(45deg, #fe5a59, #2686f7);
   border: none;
   cursor: pointer;
 }
@@ -145,3 +170,5 @@
   background-color: transparent;
   border: none;
 }
+
+

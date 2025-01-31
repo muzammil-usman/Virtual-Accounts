@@ -54,18 +54,22 @@ let openLoginPopUp = () => {
   log.style.display = "flex";
 };
 loginBtn.addEventListener("click", openLoginPopUp);
-// let quitBtn = document.getElementById("quit");
-// let quitTopUp = () => {
-//   let log = document.getElementById("log");
-//   log.style.display = "none";
-// }
-// quitBtn.addEventListener("click", quitTopUp);
-// let quitBtn2 = document.getElementById("quit2");
-// quitBtn2.addEventListener('click', quitTopUp);
+let quitBtn = document.getElementById("cross-1");
+let quitTopUp = () => {
+  let log = document.getElementById("log");
+  log.style.display = "none";
+};
+quitBtn.addEventListener("click", quitTopUp);
+let quitBtn2 = document.getElementById("cross-2");
+quitBtn2.addEventListener("click", quitTopUp);
 
 let signUpPage = () => {
   let signInPage = document.getElementById("signIN");
   let signUpPage = document.getElementById("signUP");
+  let error1 = document.getElementById("signin-error");
+  let error2 = document.getElementById("signin-error-2");
+  error1.style.display = "none";
+  error2.style.display = "none";
   signUpPage.style.display = "flex";
   signInPage.style.display = "none";
 };
@@ -80,3 +84,39 @@ let signInPage = () => {
 };
 let signInBtn = document.getElementById("si");
 signInBtn.addEventListener("click", signInPage);
+
+// Validations
+
+let emailValid = (mail) => {
+  let error = document.getElementById("signup-error");
+  if (mail.target.value.length === 0) {
+    error.style.display = "none";
+    return;
+  }
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail.target.value)) {
+    error.style.display = "none";
+    return;
+  }
+  error.style.display = "block";
+  error.style.color = "red";
+  error.innerText = "Invalid Email Address";
+};
+let userValidEmail = document.getElementById("user-email-2");
+userValidEmail.addEventListener("input", emailValid);
+
+let passValid = (pass) => {
+  let error = document.getElementById("signup-error-2");
+  if (pass.target.value.length === 0) {
+    error.style.display = "none";
+    return;
+  }
+  if (pass.target.value.length < 8) {
+    error.style.display = "block";
+    error.style.color = "red";
+    error.innerText = "Atleast 8 character and 1 Uppercase Required";
+    return;
+  }
+  error.style.display = "none";
+};
+let userValidPw = document.getElementById("user-pw-2");
+userValidPw.addEventListener("input", passValid);
