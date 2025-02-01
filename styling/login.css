@@ -1,11 +1,13 @@
-
-
 .login-pop {
   display: none;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #11111197;
+  background-image: url(../Assets/bg.jpg);
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.236);
+  background-blend-mode:darken;
   width: 100%;
   overflow: hidden;
   position: absolute;
@@ -13,85 +15,48 @@
   backdrop-filter: blur(5px);
   z-index: 2;
 }
+
+.crossBtn {
+  width: 100%;
+  display: flex;
+  justify-content:space-between;
+}
+
+.cross {
+  font-size: 25px;
+  color: #fe5a59;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 .ring {
-  position: relative;
-  width: 500px;
-  height: 500px;
+  width: auto;
+  height: auto;
+  padding: 35px 35px;
   display: flex;
   justify-content: center;
+  border-radius: 50px;
   align-items: center;
-}
-.ring i {
-  position: absolute;
-  inset: 0;
-  border: 2px solid #fff;
-  transition: 0.5s;
-}
-.ring i:nth-child(1) {
-  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
-  animation: animate 6s linear infinite;
-}
-.ring i:nth-child(2) {
-  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
-  animation: animate 4s linear infinite;
-}
-.ring i:nth-child(3) {
-  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
-  animation: animate2 10s linear infinite;
-}
-.ring:hover i {
-  border: 6px solid var(--clr);
-  filter: drop-shadow(0 0 20px var(--clr));
+  background-color: rgba(0, 0, 0, 0.415);
+  backdrop-filter: blur(3px);
+  box-shadow: #fe5a59 0px 3px 8px;
 }
 
 .ring2 {
-  position: relative;
-  width: 500px;
-  height: 500px;
+  width: auto;
+  height: auto;
+  padding: 35px 35px;
+  display: none;
   justify-content: center;
-  align-items: center;
   border-radius: 50px;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.415);
+  backdrop-filter: blur(3px);
+  box-shadow: #fe5a59 0px 3px 8px;
 }
-.ring2 i {
-  position: absolute;
-  inset: 0;
-  border: 2px solid #fff;
-  transition: 0.5s;
-}
-.ring2 i:nth-child(1) {
-  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
-  animation: animate 6s linear infinite;
-}
-.ring2 i:nth-child(2) {
-  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
-  animation: animate 4s linear infinite;
-}
-.ring2 i:nth-child(3) {
-  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
-  animation: animate2 10s linear infinite;
-}
-.ring2:hover i {
-  border: 6px solid var(--clr);
-  filter: drop-shadow(0 0 20px var(--clr));
-}
-@keyframes animate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes animate2 {
-  0% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
+
 .login {
-  position: absolute;
   width: 300px;
   height: 100%;
   display: flex;
@@ -105,11 +70,9 @@
   color: #fff;
 }
 .login .inputBx {
-  position: relative;
   width: 100%;
 }
 .login .inputBx input {
-  position: relative;
   width: 100%;
   padding: 12px 20px;
   background: transparent;
@@ -119,10 +82,19 @@
   box-shadow: none;
   outline: none;
 }
+
+.error {
+  display: none;
+  color: #fe5a59;
+  text-align: left;
+  font-size: 14px;
+  padding: 5px 5px 5px 5px;
+}
+
 .login .inputBx input[type="submit"] {
   width: 100%;
   background: #0078ff;
-  background: linear-gradient(45deg, #ff357a, #fff172);
+  background: linear-gradient(45deg, #fe5a59, #2686f7);
   border: none;
   cursor: pointer;
 }
@@ -130,7 +102,6 @@
   color: rgba(255, 255, 255, 0.75);
 }
 .login .btnLinks {
-  position: relative;
   width: 100%;
   display: flex;
   align-items: center;
@@ -139,7 +110,7 @@
   backdrop-filter: blur(3px);
 }
 
-.login .btnLinks > button{
+.login .btnLinks > button {
   color: #fff;
   text-decoration: none;
   background-color: transparent;

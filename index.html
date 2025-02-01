@@ -209,19 +209,27 @@
       </div>
       <div class="login-pop" id="log">
         <div class="sign-in ring" id="signIN">
-          <i style="--clr: #00ff0a"></i>
-          <i style="--clr: #ff0057"></i>
-          <i style="--clr: #fffd44"></i>
+          <i style="--clr: #2686f7"></i>
+          <i style="--clr: 109e5a"></i>
+          <i style="--clr: #fe5a59"></i>
           <div class="login">
+            <div class="crossBtn">
+              <img width="50px" height="50px" src="./Assets/final-logo.png" alt="logo">
+              <button id="cross-1" class="cross">
+                <j class="fa-solid fa-circle-xmark"></j>
+              </button>
+            </div>
             <h2>Sign In</h2>
             <div class="inputBx">
               <input type="email" placeholder="Email" id="user-email" />
+              <span id="signin-error" class="error">Wrong Credentials</span>
             </div>
             <div class="inputBx">
               <input type="password" placeholder="Password" id="user-pw" />
+              <span id="signin-error-2" class="error">Wrong Credentials</span>
             </div>
             <div class="inputBx">
-              <input id="SignInBtn" type="submit" value="Sign In" />
+              <input type="submit" id="signInBtn" value="Sign In" />
             </div>
             <div class="btnLinks">
               <button>Forget Password?</button>
@@ -234,15 +242,24 @@
           <i style="--clr: #ff0057"></i>
           <i style="--clr: #fffd44"></i>
           <div class="login">
+            <div class="crossBtn">
+              <img width="50px" height="50px" src="./Assets/final-logo.png" alt="logo">
+              <button id="cross-2" class="cross">
+                <j class="fa-solid fa-circle-xmark"></j>
+              </button>
+            </div>
             <h2>Sign Up</h2>
             <div class="inputBx">
               <input type="text" placeholder="Full Name" id="user-name" />
+              <span id="signup-error-1" class="error"></span>
             </div>
             <div class="inputBx">
               <input type="email" placeholder="Email" id="user-email-2" />
+              <span id="signup-error" class="error"></span>
             </div>
             <div class="inputBx">
               <input type="password" placeholder="Password" id="user-pw-2" />
+              <span id="signup-error-2" class="error"></span>
             </div>
             <div class="inputBx">
               <input type="submit" id="SignUpBtn" value="Sign Up" />
