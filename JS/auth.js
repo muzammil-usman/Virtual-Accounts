@@ -118,7 +118,6 @@ let userSignIn = async () => {
       });
       localStorage.setItem("login", JSON.stringify(localData));
       location.reload();
-      location.reload();
     })
     .catch((error) => {
       const errorCode = error.code;
